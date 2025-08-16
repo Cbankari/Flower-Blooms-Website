@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Signup</title>
+  <link rel="stylesheet" href="Login&signUp.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Sign Up Form -->
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <br>       
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Username " />
+        <input type="password" placeholder="Password" />
+        <br>
+        <button onclick="signup()">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Login</h1>
+        <br>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <br>
+        <button onclick="login()" >Login</button>
+      </form>
+    </div>
+
+    <!-- Overlay Panel -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p class="overlay-paragraph">To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn"><b>Login</b></button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p class="overlay-paragraph">Enter your personal details and start your journey with us</p>
+          <button class="ghost" id="signUp"><b>Sign Up</b></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Login&signUp.js"></script>
+</body>
+</html>   

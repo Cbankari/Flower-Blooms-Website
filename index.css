@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* #ffb6c1 */
+header {
+  font-size: 20px;
+  height:100px;
+  background-color: #ffb5c0;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.product-card span {
+    display: block;
+    background: #f8e9d2;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    width:400px;
+    letter-spacing: 0.5px;
+}
+
+.product-list{
+  height: 600px;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 2px solid #d4af37; /* gold border */
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: auto;
+    text-decoration:none;
+}
+
+.category {
+    height: 300px;
+    width:300px;
+    border: 1px solid #d4af37;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    text-decoration:none;
+}
+
+.category-image{
+  height: 200px;
+  width:220px;
+}
+
+
+
+.SelectType{
+    font-size: 20px;
+    font-weight: 500;
+    color: #d4af37;
+    text-decoration:none;
+}
+
+@media (max-width: 768px) {
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 25px;
+  background: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: #ff69b4;
+}
+
+.cart {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: #fff;
+  padding: 1rem;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.cart ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.cart ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.product-card{
+  height:1000px;
+  width:400px;
+  background-color: #f1d4d8;
+  
+}
+
+button{
+  background-color:#5289b6 ;
+
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  border: #1d3243;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.product-card p {
+    color: #000000;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.bestselling h1{
+  font-size: 32px;
+}
+.bestselling p{
+  font-size: 19px;
+}
+
+.about-contact{
+  background-color: #305b7f;
+  color: white;
+  font-size: 15px;
+  text-align: justify;   
+  padding: 15px;
+}
+
+.about-contact p{
+  font-size: 19px;
+}
+
+
+/* Payment Modal Styles */
+.payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.payment-content {
+  background: white;
+  width: 350px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.payment-content h2 {
+  margin-bottom: 15px;
+}
+
+.payment-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.payment-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.payment-content button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-content button:hover {
+  background: #256527;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curated Collections</title>
+<link rel="stylesheet" href="AllFlowers.css">
+</head>
+<body>
+
+ <header>
+    <h1>🌸 Flower Bloom</h1>
+    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
+  <br>
+
+<section class="collections">
+    <h2>Birthday Flowers</h2>
+    <p>Celebrate their special day with blooms as bright and joyfull as their smile</p>
+    
+    <div class="grid">
+        <div class="card">
+            <img src="BirthdayFlowers1.jpeg" alt="Birthdays">
+            <span>BIRTHDAY MELODY</span>
+            <p>₹1,645</p>
+            <button onclick="addToCart('Birthday Melody', 1645)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers2.jpeg" alt="Birthdays">
+            <span>FLORAL CONFETTI</span>
+            <p>₹2,845</p>
+            <button onclick="addToCart('Floral', 2845)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers3.jpeg" alt="Birthdays">
+            <span> CARNATIONS FLOWERS </span>
+            <p>₹1,745</p>
+            <button onclick="addToCart('Carbations flowers', 1745)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers4.jpeg" alt="Birthdays">
+            <span>DREAM CLOUD FLOWER</span>
+            <p>₹2,145</p>
+            <button onclick="addToCart('Dream cloud flower ', 2145)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers5.jpeg" alt="Birthdays">
+            <span>VANILLA SUNSHINE</span>
+            <p>₹2,645</p>
+            <button onclick="addToCart('Vanilla sunshine', 2645)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers9.jpeg" alt="Birthdays">
+            <span>STRAWBERRY MATCHA</span>
+            <p>₹3,445</p>
+            <button onclick="addToCart('Strawberry matcha', 3445)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers7.jpeg" alt="Birthdays">
+            <span>DRIED FLOWER</span>
+            <p>₹3,951</p>
+            <button onclick="addToCart('Dried', 3951)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers8.jpeg" alt="Birthdays">
+            <span>ROYAL GARDEN</span>
+            <p>₹2,496</p>
+            <button onclick="addToCart('Royal Garden', 2496)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers6.jpeg" alt="Birthdays">
+            <span>PINK PETAL PERFECTION</span>
+            <p>₹4,568</p>
+            <button onclick="addToCart('Pink petal perfection', 4568)">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="BirthdayFlowers10.jpeg" alt="Birthdays">
+            <span>ROSY BISCOFF</span>
+            <p>₹1,595</p>
+            <button onclick="addToCart('Rosy biscoff', 1595)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+
+<div class="cart" id="cart">
+  <h2>Shopping Cart</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: ₹<span id="total">0</span></p>
+  <button id="buy-btn" onclick="buyNow()">Buy</button>
+  <button id="proceed-btn" style="display:none;" onclick="openPaymentPopup()">Proceed to Pay</button>
+</div>
+
+<!-- Payment Popup Modal -->
+<div id="payment-modal" class="payment-modal">
+  <div class="payment-content">
+    <span class="close-btn" onclick="closePaymentPopup()">&times;</span>
+    <h2>Payment Checkout</h2>
+    <form id="payment-form">
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Card Number</label>
+      <input type="text" maxlength="12" required>
+
+      <label>Expiry Date</label>
+      <input type="month" required>
+
+      <label>CVV</label>
+      <input type="password" maxlength="3" required>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
